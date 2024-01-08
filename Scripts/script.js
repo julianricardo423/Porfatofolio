@@ -294,7 +294,7 @@ document.addEventListener('DOMContentLoaded', function()
     lineaH1.style.height = '0px';
 
     /*Contenedor derecho mostrar foto*/
-    document.getElementById('variasImagenes').src = './Imagenes/descarga.jpg';    
+    document.getElementById('variasImagenes').src = './Imagenes/foto.png';    
 
     //EVENTOS
     /*Esta primera función es para mostrar el título y párrafo, del contenedor izquierdo
