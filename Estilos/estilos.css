@@ -1,0 +1,810 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root
+{
+    --anchoTextBox: 50%;
+}
+
+/*Color de las letras y fondo del cuerpo de la página*/
+body
+{
+    color: #d1d1d1;
+    background: #1d1d20;
+}
+
+footer
+{
+    font-size: 13px;
+    margin-top: 22%;
+    margin-left: 84%;
+}
+
+/*Es el primer título del parrafo, las transiciones y posiciones que se ponen es para poder dar efecto una vez opriman
+una opción del menú*/
+#titulo1
+{
+    margin-top: -7%;
+    margin-left: 1.8%;
+    font-size: 34px;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Cambiar el fondo de la imagen que viene por defecto*/
+#navbarIcons img
+{
+    background: #d1d1d1;
+}
+
+/*Es el segundo título del parrafo, las transiciones y posiciones que se ponen es para poder dar efecto una vez opriman
+una opción del menú*/
+#titulo2
+{
+    margin-top: 23%;
+    margin-left: 1.8%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+    font-size: 34px;
+}
+
+/*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+#parrafo1
+{
+    margin-top: 20%;
+    margin-left: 2%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+#parrafo2
+{
+    margin-top: 80%;
+    margin-left: 2%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Margen para la línea izquierda del parrafo*/
+#lineaVertical2
+{
+    margin-top: 10%;
+}
+
+/*Propiedades para poder realizar el efecto de cambio de imagenes al seleccionar una opción del menú para el contenedor derecho*/
+#variasImagenes
+{
+    width: 80%;
+    height: 200%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Propiedades para poder realizar el efecto de cambio de texto al seleccionar una opción del menú para el contenedor derecho*/
+#proyecto1
+{
+    margin-left: 40%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Estilo formulario, que sean columnas por defecto y tenga un espacio entre filas*/
+#FormularioContacto
+{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;/*Espacio entre filas*/
+    margin-left: 17%;
+    margin-top: 5%;
+}
+
+#nombre
+{
+    margin-left: 4%;
+    width: var(--anchoTextBox);
+}
+
+#apellido
+{
+    margin-left: 3.2%;
+    width: var(--anchoTextBox);
+}
+
+#email
+{
+    margin-left: 7%;
+    width: var(--anchoTextBox);
+}
+
+#empresa
+{
+    margin-left: 3.2%;
+    width: var(--anchoTextBox);
+}
+
+#telefono
+{
+    margin-left: 5%;
+    width: var(--anchoTextBox);
+}
+
+#mensaje
+{
+    margin-left: 4.5%;
+    width: var(--anchoTextBox);
+    height: 80px;
+}
+
+#botonEnviar
+{
+    margin-top: 3%;
+    margin-left: 24%;
+    width: 25%;
+    height: 25px;
+    
+}
+
+/*Clase para que las palabras que estan en el contenedor derecho, al pasar el mouse se pueda cambiar el puntero y
+se pueda ver la transición de que se agranda la palabra*/
+.palabra
+{
+    cursor: pointer;
+    display: block;
+    transition: all .5s ease-in-out;
+}
+
+/*Línea horizontal que acompaña al id proyecto1, las transiciones y posiciones que se ponen es para poder dar efecto una vez opriman
+una opción del menú*/
+.lineaHorizontal
+{
+    /* margin-bottom: 0.2%;
+    width: 65px;
+    height: 4px; */
+    margin-left: 40%;
+    margin-top: 7%;
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Linea vertical que acompaña a los parrafos del contenedor izquierdo, las transiciones y posiciones que se ponen es para
+poder dar efecto una vez opriman una opción del menú*/
+ .lineaVertical
+{
+    margin-top: 90%;
+    transition: 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    position: absolute;
+    left: 0;
+    opacity: 1;
+}
+
+/*Validar el tamaño de la línea que acompaña a cada proyecto */
+/* #lineaProyecto3
+{
+    width: 165px;
+}
+
+#lineaProyecto1
+{
+    width: 15px;
+} */
+
+/*Es el efecto que se da, una vez se pasa el mouse por encima del id proyecto1*/
+.palabra:hover
+{
+    font-size: 105%;
+}
+
+/*Es el efecto que se da, una vez se pasa el mouse por encima del id proyecto1, se agranda la línea horizontal que acompaña la
+palabra*/
+.palabra:hover + .lineaHorizontal
+{
+    height: 5px;
+    transition: all .5s ease-in-out;
+}
+
+/*Contenedor principal, colocamos las celdas como si fueran celdas de una tabla con un espacio entre ellas*/
+.contenedorPrincipal
+{
+    margin-left: 5%;
+    margin-top: 7%;
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Este es el contenedor hijo de principal, en el cual le de decimos que los elementos los ponga en varias líneas si no caben en una
+en forma de columnas, con tamaño de 450 px y con una posición relativa para poder realizar la transición, aqui se alamcenan
+imagenes, textos y lienas horizontales*/
+.contenedorDerecho
+{
+    margin-left: 5%;
+    margin-bottom: -2%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap-reverse;
+    width: 450px;
+    position: relative;
+}
+
+/*Es el elemento hijo del contenedor derecho, como lo dice su nombre elemento derecho, en donde vamos a agrupar las líneas y
+los parrafos como si fueran columnas*/
+.elementoContenedorDerecho
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+/*Es es el contenedor hijo del principal, este contiene titulos, parrafos y líneas verticales*/
+.contenedorIzquierdo
+{
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 800px;
+    position: relative;
+}
+
+/*Es el elemento hijo, como lo dice su nombre elemento izquierdo, en donde vamos a agrupar las líneas y los parrafos como si fueran
+filas, alineado a la izquierda*/
+.elementoContenedorIzquierdo
+{
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    margin-bottom: 5%;
+}
+
+/*Es un contenedor que nos ayuda a alineas los texto con las líneas horizontales del contenedor de la derecha */
+.contenedorLineaHorizontal
+{
+    display: flex;
+    align-items: center;
+}
+
+/*Logo de la parte superior izquierda de la pantalla*/
+.navbar-logo img
+{
+    height: 50px;
+    margin: 0;
+}
+
+header
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.lista-nav
+{
+    list-style-type: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.lista-nav li a
+{
+    text-decoration: none;
+    color: #d1d1d1;
+}
+
+.abrirMenu, .cerrarMenu
+{
+    display: none;
+}
+
+/*Decorar y dar estilos las opciones del menú, sobre mi, habilidades, proyectos y reflexión*/
+.navbar-menu a
+{
+    color: #d1d1d1;
+    text-decoration: none;
+    margin: 0 10px;
+    padding: 5px 10px;
+}
+
+/*Esta clase nos ayuda a realizar la transción de los parrafos hacia la izquierda*/
+.ocultoContenedorIzquierdo
+{
+    transform: translateX(-204%);
+    opacity: 0;
+}
+
+/*Esta clase nos ayuda a realizar la transción de los parrafos hacia la derecha*/
+.ocultoContenedorDerecho
+{
+    transform: translateX(172%);
+    opacity: 0;
+}
+
+/*Esta clase nos ayuda a realizar la transción de los parrafos hacia la derecha*/
+.ocultoContenedorDerechoTextoLineas
+{
+    transform: translateX(500%);
+    opacity: 0;
+}
+
+/*Iconos de git y linkedin*/
+.navbar-icons a img
+{
+    height: 20px;
+}
+
+.modal
+{
+    display: none;
+    position: fixed;/*Se queda fijo en un lugar*/
+    z-index: 1;/*Se situa sobre todo lo demás*/
+    left: 0;
+    top: 0;
+    width: 100%;/*Fondo color negro*/
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    color: #d1d1d1;
+}
+
+.modal-content
+{
+    background-color: #1d1d20;
+    /* margin: 15% auto; */
+    margin-left: 25%;
+    margin-top: 10%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    height: 70%
+}
+
+.cerrar
+{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.cerrar:hover, .cerrar:focus
+{
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal .modal-content #tituloModal
+{
+    text-align: center;
+
+}
+
+.filaFormulario
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+/* .hamburger div
+{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+} */
+
+/* .hamburger
+{
+    display: none;
+    cursor: pointer;
+} */
+
+/* .mostrar
+{
+    display: block !important;
+} */
+
+
+@media screen and (min-width: 360px) and (max-width: 430px)
+{
+    footer
+    {
+        font-size: 13px;
+        margin-top: 250%;
+        margin-left: 23%;
+        margin-bottom: 5%;
+    }
+
+    #variasImagenes
+    {
+        margin-top: 320%;
+        width: 100%;
+        height: 450%;
+    }
+
+    #titulo1
+    {
+        font-size: 25px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    /*Es el segundo título del parrafo, las transiciones y posiciones que se ponen es para poder dar efecto una vez opriman
+    una opción del menú*/
+    #titulo2
+    {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+        font-size: 25px;
+    }
+
+    /*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+    #parrafo1
+    {
+        margin-top: 280%;
+        margin-left: 2%;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    /*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+    #parrafo2
+    {
+        margin-top: 780%;
+        margin-left: 2%;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    #proyecto1
+    {
+        margin-top: 200%;
+        margin-left: 2%;
+    }
+
+    #nombre
+    {
+        margin-left: 5%;
+        width: var(--anchoTextBox);
+    }
+
+    #apellido
+    {
+        margin-left: 3.2%;
+        width: var(--anchoTextBox);
+    }
+
+    #email
+    {
+        margin-left: 13%;
+        width: var(--anchoTextBox);
+    }
+
+    #empresa
+    {
+        margin-left: 3.2%;
+        width: var(--anchoTextBox);
+    }
+
+    #telefono
+    {
+        margin-left: 9%;
+        width: var(--anchoTextBox);
+    }
+
+    #mensaje
+    {
+        margin-left: 7%;
+        width: var(--anchoTextBox);
+        height: 80px;
+    }
+
+    #botonEnviar
+    {
+        margin-top: 3%;
+        margin-left: 20%;
+        width: 50%;
+        height: 25px;
+        
+    }
+
+    #lineaProyecto1
+    {
+        width: 150px;
+    }
+
+    .abrirMenu
+    {
+        order: 3;
+    }
+
+    .navbar-logo
+    {
+        order: 1;
+    }
+
+    .navbar-icons
+    {
+        order: 2;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    .ocultarImagen
+    {
+        display: none;
+    }
+
+    .abrirMenu, .cerrarMenu
+    {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+        color: #d1d1d1;
+    }
+
+    .navbar
+    {
+        display: flex;
+        visibility: hidden;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #2D3032;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgb(0, 0, 0, .5);
+    }
+
+    .navbar.visible
+    {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .lista-nav
+    {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    /*Línea horizontal desaparece, ya que no se puede dar el mismo efecto con el javascript*/
+    .lineaHorizontal
+    {
+        display: none;
+    }
+
+    /*Linea vertical desaparece, ya que no se puede dar el mismo efecto con el javascript*/
+    /* .lineaVertical
+    {
+        display: none;
+    } */
+
+    /*Es es el contenedor hijo del principal, este contiene titulos, parrafos y líneas verticales*/
+    .contenedorIzquierdo
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 700px;
+        position: relative;
+    }
+
+    /*Es el elemento hijo, como lo dice su nombre elemento izquierdo, en donde vamos a agrupar las líneas y los parrafos como si fueran
+    filas, alineado a la izquierda*/
+    .elementoContenedorIzquierdo
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        margin-bottom: 5%;
+    }
+
+    .modal-content
+    {
+        background-color: #1d1d20;
+        margin-left: 15%;
+        margin-top: 15%;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+        height: 55%
+    }
+
+}
+
+/* @media screen and (min-width: 360px) and (max-width: 430px) */
+@media screen and (min-width: 767px) and (max-width: 1024px)
+{
+    footer
+    {
+        font-size: 18px;
+        margin-top: 190%;
+        margin-left: 62%;
+        margin-bottom: 5%;
+    }
+
+    #variasImagenes
+    {
+        margin-top: 320%;
+        width: 100%;
+        height: 450%;
+    }
+
+    #titulo1
+    {
+        font-size: 70px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    /*Es el segundo título del parrafo, las transiciones y posiciones que se ponen es para poder dar efecto una vez opriman
+    una opción del menú*/
+    #titulo2
+    {
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+        font-size: 70px;
+    }
+
+    /*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+    #parrafo1
+    {
+        font-size: 30px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    /*Propiedades para poder realizar el efecto de cambio de parrafos al seleccionar una opción del menú*/
+    #parrafo2
+    {
+        font-size: 30px;
+        transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        position: absolute;
+        left: 0;
+        opacity: 1;
+    }
+
+    #proyecto1
+    {
+        font-size: 30px;
+        margin-top: 200%;
+        margin-left: 30%;
+    }
+
+    #nombre
+    {
+        margin-left: 7%;
+        width: var(--anchoTextBox);
+    }
+
+    #apellido
+    {
+        margin-left: 6%;
+        width: var(--anchoTextBox);
+    }
+
+    #email
+    {
+        margin-left: 11%;
+        width: var(--anchoTextBox);
+    }
+
+    #empresa
+    {
+        margin-left: 6%;
+        width: var(--anchoTextBox);
+    }
+
+    #telefono
+    {
+        margin-left: 8%;
+        width: var(--anchoTextBox);
+    }
+
+    #mensaje
+    {
+        margin-left: 7%;
+        width: var(--anchoTextBox);
+        height: 80px;
+    }
+
+    #botonEnviar
+    {
+        margin-top: 3%;
+        margin-left: 30%;
+        width: 25%;
+        height: 25px;
+        
+    }
+
+    .lineaHorizontal
+    {
+        display: none;
+    }
+
+    /*Es es el contenedor hijo del principal, este contiene titulos, parrafos y líneas verticales*/
+    .contenedorIzquierdo
+    {
+        margin-left: 5%;
+        margin-right: 5%;
+        width: 800px;
+        position: relative;
+    }
+
+    /*Es el elemento hijo, como lo dice su nombre elemento izquierdo, en donde vamos a agrupar las líneas y los parrafos como si fueran
+    filas, alineado a la izquierda*/
+    .elementoContenedorIzquierdo
+    {
+        display: flex;
+        flex-direction: row;
+        align-items: left;
+        margin-bottom: 5%;
+    }
+
+    .modal-content
+    {
+        background-color: #1d1d20;
+        margin-left: 15%;
+        margin-top: 15%;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 70%;
+        height: 55%
+    }
+
+    .contenedorDerecho
+    {
+        margin-left: 5%;
+        margin-bottom: 0.5%;
+        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: wrap-reverse;
+        width: 450px;   
+        position: relative;
+    }
+}
+
