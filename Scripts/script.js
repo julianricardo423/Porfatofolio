@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function()
     {
         /*realizar efecto para cambio de contenido, mandando como parametro las variables inicializadas*/
         efectoContenedorIzquierdo(sobreMiTituloE, sobreMiParrafoE, sobreMiTituloI, sobreMiParrafoI);
-        efectoContenedorDerecho('./Imagenes/descarga.jpg');
+        efectoContenedorDerecho('./Imagenes/foto.png');
 
         //Elemento 1, dar el ancho y la altura a la línea vertical que acompaña al parrafo en español
         lineaV1 = document.getElementById('lineaVertical1');
@@ -437,26 +437,28 @@ document.getElementById('FormularioContacto').addEventListener('submit', functio
             icon: "info"
           });
     }
-
-    //validar si el correo tiene formato de correo
-    if(!(validarEmail(emailI)))
+    else
     {
-        validarFormulario = false;
-        Swal.fire({
-            title: "Lo siento, la información ingresada no cumple con las caracteristicas de un correo",
-            text: "Los unicos dominios admitidos son: gmail, yahoo, hotmail y outlook",
-            icon: "error"
-          });
-    }
+        //validar si el correo tiene formato de correo
+        if(!(validarEmail(emailI)))
+        {
+            validarFormulario = false;
+            Swal.fire({
+                title: "Lo siento, la información ingresada no cumple con las caracteristicas de un correo",
+                text: "Los unicos dominios admitidos son: gmail, yahoo, hotmail y outlook",
+                icon: "error"
+            });
+        }
 
-    if(!(validarNumeroCelular(telefonoI)))
-    {
-        validarFormulario = false;
-        Swal.fire({
-            title: "Lo siento, el número ingresado no cumple con el formato de un celular",
-            text: "Debe ingresar con espacios el número de celular tal y como se muestra a continuación: 320 874 9878",
-            icon: "error"
-          });
+        if(!(validarNumeroCelular(telefonoI)))
+        {
+            validarFormulario = false;
+            Swal.fire({
+                title: "Lo siento, el número ingresado no cumple con el formato de un celular",
+                text: "Debe ingresar con espacios el número de celular tal y como se muestra a continuación: 320 874 9878",
+                icon: "error"
+            });
+        }
     }
 
     if(validarFormulario)
@@ -495,20 +497,6 @@ let tituloProyecto2;
 let parrafoProyecto2;
 let tamanioPantalla;
 let ocultar = document.getElementById('variasImagenes');
-
-//Ocultar imagen, una vez opriman una opción sobreMiMenu
-// const sobreMiMenu = document.querySelector('#sobreMi');
-// sobreMiMenu.addEventListener('click', ()=> 
-// {
-//     nav.classList.remove('visible');
-// });
-
-//Ocultar imagen, una vez opriman una opción habilidades
-// const habilidades = document.querySelector('#habilidades');
-// habilidades.addEventListener('click', ()=> 
-// {
-//     nav.classList.remove('visible');
-// });
 
 //Obtener el tamaño actual de la pantalla
 tamanioPantalla = parseInt(window.innerWidth);
